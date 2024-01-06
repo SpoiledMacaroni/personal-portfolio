@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Developer | Dennis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="main-nav">
+      <a class="nav-home" href="/">
+        <img class="logo" src="./assets/dennis-lay-logo.svg" alt="Dennis Lay logo" width="42" height="42">
+      </a>
+      <span class="flex-1"></span>
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#projects">Projects</a>
+  </nav>
+  <nav class="mobile-nav">
+      <a class="nav-link" href="/">
+        <img class="logo" src="./assets/dennis-lay-logo.svg" alt="Dennis Lay logo" width="42" height="42">
+      </a>
+      <input type="checkbox" id="overlay-input">
+      <label for="overlay-input" class="overlay-button">
+          <span></span>
+      </label>
+      <div class="overlay" id="overlay">
+          <nav>
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#projects">Projects</a>
+              <a rel="me" class="nav-link" target="__blank" href="https://github.com/SpoiledMacaroni" title="GitHub">GitHub</a>
+              <a rel="me" class="nav-link" target="__blank" href="https://twitter.com/do_Dango" title="Twitter">Twitter</a>
+              <a rel="me" class="nav-link" target="__blank" href="https://www.linkedin.com/in/dennis-lay-155250ba/" title="LinkedIn">LinkedIn</a>  
+          </nav>
+      </div>
+  </nav>
+  </header>
+  <main>
+    <div class="container" id="home">
+        <div class="text-container">
+            <div class="author-container">
+                <h1 class="author">Dennis Lay</h1>
+                <div class="description">An engineer who loves helping clients build user-centric solutions. Dennis is a proud member of the Codédex community, where he continues to develop his HTML, CSS and JavaScript skills.</div>
+            </div>
+        </div>
+        <div class="image-container">
+            <div class="hero-image">
+                <picture>
+                    <img src="/assets/dennis-chibi.png" width="290" height="290" alt="Dennis Chibi Art Placeholder">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <section class="projects" id="projects">
+      <h2>Featured Projects and Content</h2>
+        <ul>
+            <li>
+                <a href="https://scatteredthoughts.neocities.org/restaurant-menu" title="High Steaks Restaurant">
+                    <h3>Steak Restaurant Menu</h3>
+                </a>
+                <div>This is a live demo for a restaurant menu page, with responsive design and aesthetic UI.</div>
+            </li>
+            <li>
+                <a href="https://scatteredthoughts.neocities.org/test" title="Javascript Calculator">
+                    <h3>Javascript Calculator</h3>
+                </a>
+                <div>This is a simple and easy-to-use javascript calculator.</div>
+            </li>
+            <li>
+                <a style="font-family: Excalidraw" href="https://github.com/SnowBirds-Hackathon/Habit-Tracker" title="2024 Habit Tracker">
+                    <h3>2024 Habit Tracker - Did I Do the Thing?</h3>
+                </a>
+                <div>This is a habit-tracking website that utilizes local storage. It was built using vanilla JS framework, alongside Tailwind CSS framework and HTML. Winner of the Codédex Mini Holiday Hackathon's 'First Time Hack' Award. </div>
+            </li>
+        </ul>
+      </section>
+  </main>
+  <footer>
+    <div>
+        <nav>
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <span class="flex-1"></span>
+            <a rel="me" class="nav-link" target="__blank" href="https://github.com/SpoiledMacaroni" title="GitHub">GitHub</a>
+            <a rel="me" class="nav-link" target="__blank" href="https://twitter.com/do_Dango" title="Twitter">Twitter</a>
+            <a rel="me" class="nav-link" target="__blank" href="https://www.linkedin.com/in/dennis-lay-155250ba/" title="LinkedIn">LinkedIn</a>
+        </nav>
+    </div>
+    <div class="credits">
+        <small>Designed and built by Dennis Lay</small>
+        <img class="logo" src="./assets/dennis-lay-logo.svg" alt="Dennis Lay logo" width="42" height="42">
+    </div>
+  </footer>
+</body>
+<script>
+  // Select all elements with the class 'navlink'
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Function to uncheck the checkbox
+  function uncheckCheckbox() {
+    const checkbox = document.getElementById('overlay-input');
+    checkbox.checked = false;
+  }
+
+  // Add click event listeners to each navlink
+  navLinks.forEach(link => {
+    link.addEventListener('click', uncheckCheckbox);
+  });
+</script>
+</html>
